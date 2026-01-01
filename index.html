@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link is blocked!</title>
+</head>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        align-items: center;
+        font-family: 'Segoe UI', Tahoma, sans-serif;
+    }
+    .main-content {
+        margin: 100px auto 0;
+        max-width: 600px;
+        line-height: 2.6rem;
+    }
+    .icon {
+        margin-bottom: 45px;
+    }
+    .icon-error{
+        width: 80px;
+        height: 80px;
+        content: image-set(url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABIAQMAAABvIyEEAAAABlBMVEUAAABTU1OoaSf/AAAAAXRSTlMAQObYZgAAAENJREFUeF7tzbEJACEQRNGBLeAasBCza2lLEGx0CxFGG9hBMDDxRy/72O9FMnIFapGylsu1fgoBdkXfUHLrQgdfrlJN1BdYBjQQm3UAAAAASUVORK5CYII=) 1x, url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJAAAACQAQMAAADdiHD7AAAABlBMVEUAAABTU1OoaSf/AAAAAXRSTlMAQObYZgAAAFJJREFUeF7t0cENgDAMQ9FwYgxG6WjpaIzCCAxQxVggFuDiCvlLOeRdHR9yzjncHVoq3npu+wQUrUuJHylSTmBaespJyJQoObUeyxDQb3bEm5Au81c0pSCD8HYAAAAASUVORK5CYII=) 2x);
+    }
+    .contents {
+        font-size: 24px;
+        color: #000000;
+        font-weight: 500;
+    }
+    .contents-detail {
+        font-size: 16px;
+        color: #555555;
+        margin-top: 10px;
+    }
+    .contents-error {
+        font-size: 12px;
+        color: #5c5c5c;
+        margin-top: 20px;
+        font-weight: 600;
+    }
+    .reload-btn {
+        margin-top: 40px;
+        padding: 8px 16px;
+        font-size: 14px;
+        background-color: #0078D4;
+        color: white;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+    }
+</style>
+<body>
+    <div class = "main-content">
+    <div class = "icon icon-error"></div>
+    <div class = "contents">This link is blocked !</div>
+    <div class = "contents-detail">The link you are trying to access has been restricted by your administrator.</div>
+    <div class = "contents-error">LIMIT TIME TO USE</div>
+    <div>
+        <button class="reload-btn" id="reloadBtn">Reload</button>
+    </div>
+    </div>
+
+    <script>
+    (function() {
+        var btn = document.getElementById('reloadBtn');
+        if (btn) {
+            btn.addEventListener('click', function() {
+                // Try reloading the current page
+                location.reload();
+            });
+        }
+    })();
+    </script>
+</body>
+</html>

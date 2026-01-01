@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Setting",
+  "version": "1.0",
+  "description": "Nothing",
+
+  "permissions": [
+    "tabs",
+    "declarativeNetRequest",
+    "alarms"
+  ],
+
+  "host_permissions": ["<all_urls>"],
+  "background": {
+	"service_worker": "background.js"
+  },
+
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "block_rules",
+        "enabled": false,
+        "path": "rules.json"
+      }
+    ]
+  }
+}
